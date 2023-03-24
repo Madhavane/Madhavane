@@ -2,12 +2,7 @@ pipeline {
     agent any
 
      stages {
-        stage('Initialize'){
-            steps{
-                 echo "PATH = ${M2_HOME}/bin:${PATH}"
-                 echo "M2_HOME = /usr/share/apache-maven"
-            }
-        }
+        
         stage('Build') {
             steps {
                 dir("/var/lib/jenkins/workspace/New_demo/my-app/") {
